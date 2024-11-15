@@ -88,7 +88,7 @@ class ARMATURE_OT_smart_bone_dissolve(Operator):
                         mixmod.mix_mode = "ADD"
                         
                         # Exiting edit mode if currently in it
-                        if bpy.context.active_object.mode == "EDIT":
+                        if sel_arm.mode == "EDIT":
                             bpy.ops.object.editmode_toggle()
                         # Setting the mesh to be active object
                         mesh.select_set(True)
